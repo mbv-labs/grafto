@@ -16,8 +16,6 @@ var availabilityZones = []string{"eu-central-1a", "eu-central-1b"}
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		// Create an AWS resource (S3 Bucket)
-
 		// Setup networking
 		vpc, err := ec2.NewVpc(ctx, "grafto-vpc", &ec2.VpcArgs{
 			CidrBlock:          pulumi.String("10.0.0.0/16"),
