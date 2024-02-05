@@ -43,4 +43,4 @@ COPY --from=build-go worker worker
 COPY --from=build-go static static 
 COPY --from=build-go resources/seo resources/seo
 
-CMD ["app", "worker"]
+CMD ["./app"]
