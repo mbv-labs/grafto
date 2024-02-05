@@ -71,3 +71,13 @@ compile-templates:
 
 fmt-templates:
     templ fmt ./views/ . 
+
+# infrastructure
+preview:
+  pulumi preview --cwd ./cmd/infrastructure/ 
+
+provision:
+  pulumi up --cwd ./cmd/infrastructure/ 
+
+de-provision:
+  pulumi down --cwd ./cmd/infrastructure/ 
